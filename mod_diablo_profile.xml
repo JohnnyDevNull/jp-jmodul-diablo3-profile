@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site"
+	method="upgrade">
+	<name>JPlace Diablo 3 - Profile</name>
+	<author>Philipp John</author>
+	<creationDate>04/2014</creationDate>
+	<copyright>Copyright (C) Philipp John. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later;</license>
+	<authorEmail>info@jplace.de</authorEmail>
+	<authorUrl>www.jplace.de</authorUrl>
+	<version>1.1</version>
+	<description><![CDATA[
+		<div style="margin-bottom: 20px;">
+			<h3 color="blue">JPlace Diablo 3 - Account display</h3>
+			Shows formatted informations from a Diablo 3 battlenet account.<br>
+			copyright &copy; Philipp John, All rights reserved. <a href="http://jplace.de" target="_blank">http://jplace.de</a>
+		</div>
+	]]></description>
+	<files>
+		<filename module="mod_diablo_profile">mod_diablo_profile.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>cache</folder>
+		<folder>tmpl</folder>
+	</files>
+	<media destination="mod_diablo_profile">
+		<folder>images</folder>
+		<folder>css</folder>
+	</media>
+	<languages>
+		<language tag="de-DE">de-DE.mod_diablo_profile.ini</language>
+		<language tag="de-DE">de-DE.mod_diablo_profile.sys.ini</language>
+		<language tag="en-GB">en-GB.mod_diablo_profile.ini</language>
+		<language tag="en-GB">en-GB.mod_diablo_profile.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="options" label="COM_MODULES_BASIC_FIELDSET_LABEL">
+				<field
+					name="show_d3logo"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_DIABLO_PROFILE_FIELD_SHOW_D3LOGO_LABEL"
+					description="MOD_DIABLO_PROFILE_FIELD_SHOW_D3LOGO_DESC">
+					<option
+						value="0">MOD_DIABLO_PROFILE_NO</option>
+					<option
+						value="1">MOD_DIABLO_PROFILE_YES</option>
+				</field>
+				<field
+					name="battle_url"
+					type="list"
+					default="eu.battle.net"
+					label="MOD_DIABLO_PROFILE_FIELD_BATTLE_URL_LABEL"
+					description="MOD_DIABLO_PROFILE_FIELD_BATTLE_URL_DESC">
+					<option
+						value="eu.battle.net">MOD_DIABLO_PROFILE_FIELD_BATTLE_URL_EU</option>
+					<option
+						value="us.battle.net">MOD_DIABLO_PROFILE_FIELD_BATTLE_URL_US</option>
+					<option
+						value="sea.battle.net">MOD_DIABLO_PROFILE_FIELD_BATTLE_URL_SEA</option>
+					<option
+						value="kr.battle.net">MOD_DIABLO_PROFILE_FIELD_BATTLE_URL_KR</option>
+					<option
+						value="tw.battle.net">MOD_DIABLO_PROFILE_FIELD_BATTLE_URL_TW</option>
+					<option
+						value="battlenet.com.cn">MOD_DIABLO_PROFILE_FIELD_BATTLE_URL_CH</option>
+				</field>
+				<field
+					name="battle_name"
+					type="text"
+					default=""
+					label="MOD_DIABLO_PROFILE_FIELD_BATTLE_NAME_LABEL"
+					description="MOD_DIABLO_PROFILE_FIELD_BATTLE_NAME_DESC" />
+				<field
+					name="battle_id"
+					type="text"
+					default=""
+					label="MOD_DIABLO_PROFILE_FIELD_BATTLE_ID_LABEL"
+					description="MOD_DIABLO_PROFILE_FIELD_BATTLE_ID_DESC"
+					filter="integer" />
+				<field
+					name="hero_id"
+					type="text"
+					default=""
+					class="uneditable-input"
+					label="MOD_DIABLO_PROFILE_FIELD_HERO_ID_LABEL"
+					description="MOD_DIABLO_PROFILE_FIELD_HERO_ID_DESC"
+					filter="integer" />
+				<field
+					name="cache_requests"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="MOD_DIABLO_PROFILE_FIELD_CACHE_REQUESTS_LABEL"
+					description="MOD_DIABLO_PROFILE_FIELD_CACHE_REQUESTS_DESC">
+					<option
+						value="0">MOD_DIABLO_PROFILE_NO</option>
+					<option
+						value="1">MOD_DIABLO_PROFILE_YES</option>
+				</field>
+				<field
+					name="cache_duration"
+					type="text"
+					default="600"
+					label="MOD_DIABLO_PROFILE_FIELD_CACHE_DURATION_LABEL"
+					description="MOD_DIABLO_PROFILE_FIELD_CACHE_DURATION_DESC"
+					filter="integer" />
+			</fieldset>
+			<fieldset name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

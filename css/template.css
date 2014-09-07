@@ -1,0 +1,102 @@
+.jpd3_wrapper{
+	padding: 10px;
+	background-color: #000;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #790905;
+	color: #a99877;
+	font-size: 14px;
+	-webkit-box-shadow: 0 0 8px #790905;
+	-moz-box-shadow: 0 0 8px #790905;
+	box-shadow: 0 0 8px #790905;
+}
+
+.jpd3_wrapper.d3logo{
+	background-image: url(../images/diablo3logo.png);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	padding: 130px 10px 10px 10px;
+}
+
+.jpd3_wrapper .battletag{
+	font-size: 16px;
+	text-shadow: 0px 0px 2px red;
+	color: #CF590B
+}
+
+.jpd3_wrapper .paragon{
+	font-size: 16px;
+	text-shadow: 0px 0px 2px blue;
+	color: #392FD6;
+}
+
+.jpd3_wrapper legend{
+	background-color: #790905;
+	color: #eee;
+	border: 1px solid #960C08;
+	box-sizing: border-box;
+	font-size: 16px;
+	line-height: 20px;
+	text-align:center;
+	margin: 10px 0px;
+}
+
+.jpd3_wrapper span{
+	color: #eee;
+}
+
+.jpd3_wrapper .hero{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #111;
+}
+
+.jpd3_wrapper .hero .jpd3_hero_img{
+	margin-bottom: 5px;
+}
+
+.jpd3_wrapper .hero .jpd3_hero_img img{
+	margin-right: 18px;
+}
+
+.jpd3_wrapper .hero.hc{
+	text-shadow: 0px 0px 2px red;
+}
+
+.jpd3_wrapper .hero .jpd3_hero_img .hc_text{
+	font-size: 20px;
+	color: transparent;
+}
+
+.jpd3_wrapper .hero:last-child{
+	border-bottom: none;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+.jpd3_wrapper .jpd3_info_group label{
+	float: left;
+	width: 60px;
+	font-size: 14px;
+	margin-bottom: 0;
+	cursor: default;
+}
+
+.jpd3_wrapper .jpd3_info_group span{
+	margin-left: 65px;
+	display: block;
+	cursor: default;
+}
+
+.jpd3_wrapper .jpd3_info_group:after{
+	clear: both;
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.jpd3_wrapper .last-updated{
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid #111;
+} 
