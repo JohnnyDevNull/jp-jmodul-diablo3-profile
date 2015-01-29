@@ -22,13 +22,22 @@ class ModDiabloProfileHelper
 	 *
 	 * @param JRegistry &$params The module options.
 	 *
-	 * @return json
+	 * @return null|json
 	 */
 	public static function getCareerProfile(&$params)
 	{
 		$battleUrl = $params->get('battle_url');
 		$battleName = $params->get('battle_name');
 		$battleID = $params->get('battle_id');
+
+		if (
+			empty($battleUrl)
+			|| empty($battleName)
+			|| empty($battleID)
+		) {
+			return null;
+		}
+
 		$filepart = $battleName.'_'.$battleID.'_';
 		$cachedString = self::checkForCacheFiles($filepart, $params->get('cache_duration'));
 
@@ -104,6 +113,8 @@ class ModDiabloProfileHelper
 
 		if(empty($fileArray))
 		{
+			jimport('joomla.filesystem.file');
+
 			if(JFile::write($folder.$requestFilename, $json))
 			{
 				return true;
@@ -134,6 +145,7 @@ class ModDiabloProfileHelper
 
 			if($timediff > $cacheDuration)
 			{
+				jimport('joomla.filesystem.file');
 				JFile::delete($folder.$file);
 				return false;
 			}

@@ -15,7 +15,4 @@ require_once __DIR__ . '/helper.php';
 $profile	= ModDiabloProfileHelper::getCareerProfile($params);
 $class_sfx	= htmlspecialchars($params->get('class_sfx'));
 
-if(count($profile))
-{
-	require JModuleHelper::getLayoutPath('mod_diablo_profile', $params->get('layout', 'default'));
-}
+require JModuleHelper::getLayoutPath('mod_diablo_profile', $params->get('layout', 'default'));
