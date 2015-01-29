@@ -1,7 +1,7 @@
 ### Description
 This is a module for the content management system Joomla. It allows you to display a Diablo 3 Battlenet-Account on your homepage.
 
-For more preview see [preview.png](https://github.com/JohnnyDevNull/jp-jmodul-diablo3-profile/blob/master/preview.png) or more information see [http://jplace.de](http://jplace.de/index.php/10-blog/joomla/5-modul-diablo-3-profilanzeige)
+For more preview see [preview.png](https://github.com/JohnnyDevNull/jp-jmodul-diablo3-profile/blob/master/preview.png) or more information see [http://jplace.de](http://jplace.de/index.php/downloads/file/1-diablo-3-profilanzeige)
 
 ### Backend parameters
 * Diablo 3 logo on / off
